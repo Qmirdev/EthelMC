@@ -1,0 +1,7 @@
+aiohttp
+asyncio
+discord
+discord.ui
+mcstatus
+requests
+youtube_dl
