@@ -65,8 +65,14 @@ ICON_URL = f"{BOT_IMG_SRC}Logo.png"
 DISCORD_TICKET_CHANNEL = "<Ticket Channel Link or <#Channel-ID>>"
 DISCORD_QA_CHANNEL = "<QA Channel Link or <#Channel-ID>>"
 # Exmaple:
-# Link "https://discord.com/channels/1153453019413872694/1153453020617654337"
-# Chnnale ID: <#1153453020617654337>
+# Link "https://discord.com/channels/11532342342343872694/1153453023423454337"
+# Channel ID: <#1153453023423454337>
+
+# Discord Server's Voice Channels
+# Exmaple:
+# DISCORD_VOICE_CHANNEL_1 = 11534530213123123231
+DISCORD_VOICE_CHANNEL_1 = <Voice Channel ID>
+DISCORD_VOICE_CHANNEL_2 = <Voice Channel ID> 
 
 # Log Channels
 DISCORD_STATUS_CHANNEL = <Status log Channel ID>
@@ -225,7 +231,7 @@ async def clearall(ctx):
 @client.command()
 async def joinvc1(ctx):
   if str(ctx.message.author.id) in OWNER_UID:
-    channel = client.get_channel(1153453021259382860)
+    channel = client.get_channel(DISCORD_VOICE_CHANNEL_1)
     await channel.connect()
   else:
     await ctx.send('You are not authorized to use this command.')
@@ -235,7 +241,7 @@ async def joinvc1(ctx):
 @client.command()
 async def joinvc2(ctx):
   if str(ctx.message.author.id) in OWNER_UID:
-    channel = client.get_channel(1153453021259382861)
+    channel = client.get_channel(DISCORD_VOICE_CHANNEL_2)
     await channel.connect()
   else:
     await ctx.send('You are not authorized to use this command.')
