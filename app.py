@@ -69,11 +69,11 @@ DISCORD_QA_CHANNEL = "<QA Channel Link or <#Channel-ID>>"
 # Chnnale ID: <#1153453020617654337>
 
 # Log Channels
-DISCORD_STATUS_CHANNEL = "<Status log Channel ID>"
-DISCORD_VIOLATION_CHANNEL = "<Violation log Channel ID>"
-DISCORD_COMMAND_CHANNEL = "<Command log Channel ID>"
-DISCORD_DM_CHANNEL = "<Dm log Channel ID>"
-DISCORD_ERROR_CHANNEL = "<Error log Channel ID>"
+DISCORD_STATUS_CHANNEL = <Status log Channel ID>
+DISCORD_VIOLATION_CHANNEL = <Violation log Channel ID>
+DISCORD_COMMAND_CHANNEL = <Command log Channel ID>
+DISCORD_DM_CHANNEL = <Dm log Channel ID>
+DISCORD_ERROR_CHANNEL = <Error log Channel ID>
 
 # Appearance of the bot
 # Bot's main border color (Purple)
