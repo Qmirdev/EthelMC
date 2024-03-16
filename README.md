@@ -46,7 +46,7 @@ EthelMC Discord Bot is a feature-rich Discord bot built with python to enhance t
 - `!clearall` - Clears all messages in the current channel.
 - `!joinvc1` - Makes the bot join the first voice channel.
 - `!joinvc2` - Makes the bot join the second voice channel.
-
+- `!leavevc` - kicks out the bot from the voice channel that has been joined in.
 
 ### To Do List 📝
 
