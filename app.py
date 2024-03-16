@@ -241,6 +241,19 @@ async def joinvc2(ctx):
     await ctx.send('You are not authorized to use this command.')
 
 
+# Usage: !leavevc
+@client.command()
+async def leavevc(ctx):
+  if str(ctx.message.author.id) in OWNER_UID:
+    if ctx.voice_client:
+      await ctx.voice_client.disconnect()
+      await ctx.send("Left the voice channel")
+    else:
+      await ctx.send("Not in a voice channel")
+  else:
+    await ctx.send('You are not authorized to use this command.')
+
+
 # Usage: !admin
 @client.command()
 async def admin(ctx):
