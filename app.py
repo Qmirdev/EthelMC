@@ -13,12 +13,14 @@ import http.server
 import threading
 import youtube_dl
 
+from dotenv import load_dotenv
 from discord import Embed
 from discord.ext import commands
 from discord.ui import View, Button
 from discord.utils import get
 from mcstatus import JavaServer
 from mcstatus import BedrockServer
+
 
 # Basic HTTP server to process health check requests
 class HealthCheckHandler(http.server.BaseHTTPRequestHandler):
@@ -34,6 +36,7 @@ health_thread = threading.Thread(target=health_server.serve_forever)
 health_thread.daemon = True
 health_thread.start()
 
+load_dotenv()
 intents = discord.Intents.default()
 intents.message_content = True
 client = commands.Bot(command_prefix='!', intents=intents, help_command=None)
@@ -46,7 +49,8 @@ client = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 # Omit any unnecessary fields when customizing your bot.
 # Please ensure to include the developer's discord user ID as the first string in the OWNER_UID list.
 # The OWNER_UID grants individuals additional privileges and permissions, including access to moderation commands and other exclusive benefits.
-BOT_TOKEN = "<Your Bot Token>"
+# Loads BOT_TOKEN from .env file or environment variables.
+BOT_TOKEN = os.getenv('BOT_TOKEN') or os.environ.get('BOT_TOKEN')
 OWNER_UID = ["<Owner 1>", "<Owner 2>"]
 
 # Server Info

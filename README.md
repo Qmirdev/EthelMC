@@ -96,9 +96,9 @@ simply run the command `pip install -r requirements.txt` to install all necessar
 
 ## Configuration ⚙️
 
-After successfully installing the bot's requirements, navigate to the main file of the bot, `app.py`. Scroll down to `line 39` where the configuration of the bot begins. Here, you will find various variables that need to be filled with your specific inputs.
-<br>
-For instance, your bot's Token should be assigned to the `BOT_TOKEN` variable and the Owner user IDs should be provided next after that. Additionally, you will need to input details such as your server name, address port, server's store website URL, and other pertinent data. Ensure that any visible information is accurately filled out for the bot to function effectively.
+After successfully installing the bot's requirements, navigate to the main file of the bot, `app.py`. Scroll down to where the **Configuration** of the bot begins. Here, you will find various variables that need to be filled with your specific inputs.
+
+For instance, your bot's Token should be assigned to the **BOT_TOKEN** variable using `environment variables` or by adding it to a `.env` file. Additionally, make sure to input the Owner user IDs, server name, address port, server's store website URL, and other relevant details accurately for the bot to function effectively. Review and input all necessary information before running the bot.
 
 ## Running the Bot 🚀
 
