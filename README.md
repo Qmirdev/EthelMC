@@ -17,10 +17,14 @@ EthelMC Discord Bot is a feature-rich Discord bot built with python to enhance t
 - **Logging** - Logs various events like command usage, violations, bot status, bot errors, etc.
 - **And more!** - View all commands with `!commands` or `/commands`
 
-# Commands 
+# Commands and Events 📜
 
 > [!NOTE]
 > All commands function properly with either the ! prefix or the / prefix :shipit:
+## Bot Events 🎉
+- **Welcome Message** - Sends a welcome message to new members. Useful for greeting new people.
+- **Banned Words** - This event effectively identifies, records, and removes any banned words utilized by users within the Discord server.
+- **Reaction on Ping** - This fun and quirky addition to our bot will automatically react with a funny emoji whenever someone pings the users specified.
 
 ## Public Commands 👥
 
@@ -37,6 +41,7 @@ EthelMC Discord Bot is a feature-rich Discord bot built with python to enhance t
 - `invite` - Generates a temporary invite link to the server
 - `!help` - Explains how to get help/support for the Minecraft server. 
 - `!about` - Provides info about the Discord bot.
+
 ## Moderator Commands 👨🏻‍💻
 
 - `!admin` - Shows a list of Moderator commands.
@@ -63,7 +68,7 @@ EthelMC Discord Bot is a feature-rich Discord bot built with python to enhance t
 - ~~`invite` - Generates a temporary invite link to the server. Useful for recruiting new members.~~ ✅
 - `event` - Schedules a recurring event like a game night. Useful for community engagement.
 - `backup` - Backs up important data from an specific channel or all channels available in the server.
-- `welcome` - Sends a welcome message to new members. Useful for greeting new people.
+- ~~`welcome` - Sends a welcome message to new members. Useful for greeting new people.~~
 - `goodbye` - Bids farewell to members who left the server. Useful for showing appreciation.
 
 <h1 align=center>🍄 Getting Started 🍄</h1>

@@ -68,13 +68,15 @@ ICON_URL = f"{BOT_IMG_SRC}Logo.png"
 # Discord Server's "Ask Questions" & "Create a Ticket" Channels
 DISCORD_TICKET_CHANNEL = "<Ticket Channel Link or <#Channel-ID>>"
 DISCORD_QA_CHANNEL = "<QA Channel Link or <#Channel-ID>>"
+
 # Exmaple:
 # Link "https://discord.com/channels/11532342342343872694/1153453023423454337"
 # Channel ID: <#1153453023423454337>
 
-# Discord Server's Voice Channels
+# Discord Server Channel's ID
 # Exmaple:
-# DISCORD_VOICE_CHANNEL_1 = 11534530213123123231
+# DISCORD_WELCOME_CHANNEL = 11534530213123123231
+DISCORD_WELCOME_CHANNEL = <Welcome Channel ID> 
 DISCORD_VOICE_CHANNEL_1 = <Voice Channel ID>
 DISCORD_VOICE_CHANNEL_2 = <Voice Channel ID> 
 
@@ -176,6 +178,21 @@ async def on_message(message):
       await message.delete()
 
   await client.process_commands(message)
+
+
+# Edit Welcome Message on your own :3
+@client.event
+async def on_member_join(member):
+    guild = member.guild
+    member_count = guild.member_count
+    embed = discord.Embed(title=f"Welcome {member.name}!", description=f"Hope you enjoy your stay in {SERVER_NAME}!\nCheck out <#1210381077139689563>\nDon't forget to read the <#1210381077139689563>\nSupport us in our <#1210381077139689563>")
+    embed.set_thumbnail(url=member.avatar.url)
+    embed.add_field(name="", value="We're happy you're here!", inline=False)
+    embed.add_field(name=f"-{SERVER_NAME} Staff Team 💜", value="", inline=False)
+    embed.set_footer(text=f"You're the {str(member_count)}th member in the server")
+    
+    channel = client.get_channel(DISCORD_WELCOME_CHANNEL)
+    await channel.send(embed=embed)
 
 
 # =-=-=-=-=-=-=-=-=-=-=
