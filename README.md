@@ -34,14 +34,15 @@ EthelMC Discord Bot is a feature-rich Discord bot built with python to enhance t
 - `!membercount` - Returns the current member count of the Discord server.
 - `!commands` - Lists all the bot's commands.
 - `!ping` - Checks the bot's latency and API response time.
+- `invite` - Generates a temporary invite link to the server
 - `!help` - Explains how to get help/support for the Minecraft server. 
 - `!about` - Provides info about the Discord bot.
-- `invite` - Generates a temporary invite link to the server
 ## Moderator Commands 👨🏻‍💻
 
 - `!admin` - Shows a list of Moderator commands.
 - `!say <message>` - Makes the bot say the given message in the channel.
-- `!purge <count>` - Purges/deletes the given number of messages in the channel. 
+- `!purge <count>` - Purges/deletes the given number of messages in the channel.
+- `!kick @user <Reason(Optional)>` - Kicks a member from the server. 
 - `!sync` - Syncs the bot's slash commands with Discord.
 - `!clearall` - Clears all messages in the current channel.
 - `!joinvc1` - Makes the bot join the first voice channel.
@@ -53,13 +54,13 @@ EthelMC Discord Bot is a feature-rich Discord bot built with python to enhance t
 - `embed` - Allows sending a rich embed message with formatted text, images, links, etc. This could be used for announcements, help information, or displaying data.
 - `giveaway` - Starts a giveaway event where members can react to enter. Parameters like duration, winners, and prize can be configured. Useful for community engagement.
 - `warn` - Warns a member by logging an infraction to their account. Repeated warnings could trigger automatic punishment. Useful for moderation.
-- `kick` - Kicks a member from the server. Useful for moderating and removing problematic members.
+- ~~`kick` - Kicks a member from the server. Useful for moderating and removing problematic members.~~ ✅
 - `ban` - Permanently bans a user from the server. More severe than a kick. Useful for removing toxic members.
 - `unban` - Unbans a previously banned user, allowing them to rejoin the server. Useful if a ban was too harsh or is no longer warranted.
 - `restart` - Restarts the bot process. Useful for applying updates or refreshing state.
 - `mute` - Temporarily mutes a member from sending messages. Useful as a lighter punishment than a ban.
 - `poll` - Starts a poll where members can vote. Useful for gauging community opinions.
-- ~~`invite` - Generates a temporary invite link to the server. Useful for recruiting new members.~~
+- ~~`invite` - Generates a temporary invite link to the server. Useful for recruiting new members.~~ ✅
 - `event` - Schedules a recurring event like a game night. Useful for community engagement.
 - `backup` - Backs up important data from an specific channel or all channels available in the server.
 - `welcome` - Sends a welcome message to new members. Useful for greeting new people.

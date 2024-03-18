@@ -84,6 +84,7 @@ DISCORD_VIOLATION_CHANNEL = <Violation log Channel ID>
 DISCORD_COMMAND_CHANNEL = <Command log Channel ID>
 DISCORD_DM_CHANNEL = <Dm log Channel ID>
 DISCORD_ERROR_CHANNEL = <Error log Channel ID>
+DISCORD_MODERATION_CHANNEL = <Error log Channel ID>
 
 # Appearance of the bot
 # Bot's main border color (Purple)
@@ -264,6 +265,27 @@ async def leavevc(ctx):
     await ctx.send('You are not authorized to use this command.')
 
 
+# Usage: !kick @User <Reason(Optional)>
+@client.command()
+@commands.has_permissions(kick_members=True)
+async def kick(ctx, member: discord.Member, *, reason=None):
+  if str(ctx.message.author.id) in OWNER_UID:
+    log_channel = client.get_channel(DISCORD_MODERATION_CHANNEL)
+    current_time = datetime.datetime.now() 
+    kick_time = current_time.strftime("%m/%d/%Y, %H:%M:%S")
+    await member.kick(reason=reason)
+    embed = discord.Embed(
+        title="Member Kicked", 
+        description=f"{member} was kicked by {ctx.author.mention} on {kick_time}",
+        color=BORDER_COLOR
+    )
+    embed.set_thumbnail(url=member.avatar.url)
+    embed.add_field(name="Reason", value=reason)
+    await log_channel.send(embed=embed)
+  else:
+    await ctx.send('You are not authorized to use this command.')
+
+
 # Usage: !admin
 @client.command()
 async def admin(ctx):
@@ -272,6 +294,7 @@ async def admin(ctx):
     embedVar.add_field(name="!admin", value="", inline=False)
     embedVar.add_field(name="!say <message>", value="", inline=False)
     embedVar.add_field(name="!purge <count>", value="", inline=False)
+    embedVar.add_field(name="!kick @user <Reason(Optional)>", value="", inline=False)
     embedVar.add_field(name="!sync (update '/' commands)", value="", inline=False)
     embedVar.add_field(name="!clearall", value="", inline=False)
     embedVar.add_field(name="!joinvc1 | !joinvc2", value="", inline=False)
