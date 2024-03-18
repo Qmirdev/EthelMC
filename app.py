@@ -446,6 +446,7 @@ async def command(ctx):
   embedVar.add_field(name="!membercount | !mc", value="", inline=False)
   embedVar.add_field(name="!commands", value="", inline=False)
   embedVar.add_field(name="!ping", value="", inline=False)
+  embedVar.add_field(name="!invite", value="", inline=False)
   embedVar.add_field(name="!help", value="", inline=False)
   embedVar.add_field(name="!about", value="", inline=False)
   embedVar.set_thumbnail(url=ICON_URL)
@@ -464,6 +465,13 @@ async def membercount(ctx):
     embed.timestamp = datetime.datetime.utcnow()
     embed.set_footer(text=f'{SERVER_NAME} \u200b', icon_url=ICON_URL)
     await ctx.send(embed=embed)
+
+
+# Usage: !invite | /invite
+@client.hybrid_command(name="invite", description="Generates a temporary invite link to the server", aliases=["inv"])
+async def invite(ctx):
+    invite = await ctx.channel.create_invite(max_age=86400, max_uses=1)
+    await ctx.send(f"Here is your temporary invite link to the server <:ZeroTwo_heartlove:1209962520794898564>\n{invite}")
 
 
 client.run(BOT_TOKEN)

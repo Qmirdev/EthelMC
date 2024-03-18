@@ -36,7 +36,7 @@ EthelMC Discord Bot is a feature-rich Discord bot built with python to enhance t
 - `!ping` - Checks the bot's latency and API response time.
 - `!help` - Explains how to get help/support for the Minecraft server. 
 - `!about` - Provides info about the Discord bot.
-
+- `invite` - Generates a temporary invite link to the server
 ## Moderator Commands 👨🏻‍💻
 
 - `!admin` - Shows a list of Moderator commands.
@@ -59,7 +59,7 @@ EthelMC Discord Bot is a feature-rich Discord bot built with python to enhance t
 - `restart` - Restarts the bot process. Useful for applying updates or refreshing state.
 - `mute` - Temporarily mutes a member from sending messages. Useful as a lighter punishment than a ban.
 - `poll` - Starts a poll where members can vote. Useful for gauging community opinions.
-- `invite` - Generates a temporary invite link to the server. Useful for recruiting new members.
+- ~~`invite` - Generates a temporary invite link to the server. Useful for recruiting new members.~~
 - `event` - Schedules a recurring event like a game night. Useful for community engagement.
 - `backup` - Backs up important data from an specific channel or all channels available in the server.
 - `welcome` - Sends a welcome message to new members. Useful for greeting new people.
