@@ -97,6 +97,7 @@ EthelMC Discord Bot is a feature-rich Discord bot built with python to enhance t
 - discord
 - discord.py
 - discord.ui
+- python-dotenv
 
 simply run the command `pip install -r requirements.txt` to install all necessary dependencies.
 

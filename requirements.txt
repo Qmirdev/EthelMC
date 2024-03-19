@@ -5,3 +5,4 @@ discord.ui
 mcstatus
 requests
 youtube_dl
+python-dotenv
